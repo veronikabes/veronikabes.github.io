@@ -1,0 +1,101 @@
+/* еще один способ подключения шрифтов, через css
+гуглим google fonts api, далее берем ссылку эту 
+
+https://fonts.googleapis.com/css?family=Roboto&display=swap, меняем на свой шрифт вместо roboto
+@import url(''); */
+
+@import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
+
+body{
+    background: linear-gradient(90deg, #2082BA 0%, #5347A5 100%);
+    font-family: Michroma, serif;
+}
+p{
+    color: aquamarine;
+}
+.nav-link{
+    color: aquamarine;
+}
+.navbar-nav .nav-link.active{
+    color: aquamarine;
+}
+.navbar-brand img{
+    width: 40px;
+}
+.navbar-toggler{
+    background-color: wheat;
+}
+.sidebar{
+    color: aqua;
+    background: linear-gradient(270deg, #2082BA 0%, #5347A5 100%);
+}
+.card{
+    background: linear-gradient(270deg, #2082BA 0%, #5347A5 100%);
+    color: aquamarine;
+}
+.card a{
+    text-decoration: none;
+    color: aquamarine;
+}
+.slide-text,
+.footer-text{
+    color: aquamarine;
+    /* margin auto auto это значит, что по оси х и у будет задано
+    центральное положение */
+    margin: auto auto;
+}
+footer,
+.btn-outline-primary{
+    background: linear-gradient(270deg, #2082BA 0%, #5347A5 100%);
+}
+.media-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* для анимации звоночка */
+.call-anim{
+    animation: myAnim 2s ease 0s infinite normal forwards;
+}
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+
+
+/* если больше ничего не менять, в моб версии
+у слайдов индикаторы слайдов наслаиваются на текст 
+чтобы этого избежать надо написать команду */
+/* и просто убрать их отображение */
+@media (max-width: 755px){
+    .carousel-indicators{
+        display: none;
+    }
+}
+
+

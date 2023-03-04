@@ -1,0 +1,39 @@
+/* css для контейнера под видео */
+.bg-video{
+    width: 100%;
+    /* 70 vh значит видео занимает
+    70 процентов от высоты просмотра
+    окно уменьшаю, видео тоже само меньше */
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* css для самого видео */
+.bg-video video{
+    width: 100%;
+    /* 70 vh значит видео занимает
+    70 процентов от высоты просмотра
+    окно уменьшаю, видео тоже само меньше */
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* если видео переполняет какой-то контейнер, то поля,
+    которые не вмещаются будут обрезаны и оно будет центровано
+    по контейнеру, в котором лежит */
+    object-fit: cover;
+}
+
+/* текст спрятался под видео */
+/* для этого в .bg-video делаем
+display flex, а у .bg-video video делаем
+z-index 1, а у .video-text z-index 2,
+чтобы текст был выше видео */
+.video-text{
+    color: aquamarine;
+    z-index: 2;
+}

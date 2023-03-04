@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="source/styles/style.css">
+    <link rel="stylesheet" href="source/styles/bg-video.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="source/files/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="source/files/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="source/files/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="source/files/favicon_io/site.webmanifest">
+</head>
+
+<!-- также нужно сделать иконку для вкладки
+сайт favicon.io -->
+
+<body>
+    <!-- шапка навигации, например
+    так лучше индексируется контент на сайте
+    по поисковики продвинутные и это уже не обязательно -->
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="source/files/bread.svg" alt="hoho"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">
+                                <img style="margin-inline:1em; width:30px" src="source/files/yt.png" alt="...">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">
+                                <img style="margin-inline:1em; width:30px" src="source/files/tg.png" alt="...">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <section>
+        <div class="bg-video">
+            <video src="source/files/ocean.mp4" type="video/mp4" autoplay muted loop></video>
+            <div class="video-text">
+                <h1>Future's here</h1>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-4">
+            <!-- далее необходимо создать еще одну группу колонок, чтобы сделать две боковые и
+            одну среднюю главную полосы, и создаем отдельный большой контейнер для каждого блока -->
+
+            <div class="row">
+                <!-- боковой отступ (для акций, например), занимает одну долю -->
+                <div class="col-lg-1">
+
+                </div>
+
+                <!-- контейнер для главной карты с товарами, занимает 8 долей -->
+                <!-- боковая панель на планшетах внизу, col-md-12 -->
+                <div class="col-lg-8 col-md-12">
+                    <div class="row">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <!-- удаляем то, что скопировали из bootstrap где img, копируем класс, который 
+                                    был там у img и делаем div, в div вставляем класс, который был в строкке img -->
+                                    <div class="d-block w-100">
+                                        <!-- далее сами делаем сетку bootstrap которая row -->
+                                        <div class="row">
+                                            <!-- так как в этом контйнере где карусель мы хотим еще справа от картинки
+                                        описание, то нужно разделить на доли этот контейнер, 6 долей на картинку, 
+                                        6 долей на текст, каждый новый контейнер условно делится также на 12 частей,
+                                        какого размера он бы не был -->
+                                            <div class="col-lg-6 col-md-6">
+                                                <img src="source/images/cpu.png" class="w-100" alt="cpu">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 slide-text">
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                                                    obcaecati voluptatum voluptate, sapiente voluptates doloremque,
+                                                    earum repellat sint vel, fugiat sit cupiditate qui vitae.
+                                                    Temporibus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="carousel-item">
+                                    <div class="d-block w-100">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <!-- картинке нужно задать параметры вручную, которые она будет занимать,
+                                                а то так она знимает произвольные значения -->
+                                                <img src="source/images/gpu.png" class="w-100" alt="gpu">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 slide-text">
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                                                    obcaecati voluptatum voluptate, sapiente voluptates doloremque,
+                                                    earum repellat sint vel, fugiat sit cupiditate qui vitae.
+                                                    Temporibus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="d-block w-100">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <img src="source/images/laptop.png" class="w-100" alt="laptop">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 slide-text">
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                                                    obcaecati voluptatum voluptate, sapiente voluptates doloremque,
+                                                    earum repellat sint vel, fugiat sit cupiditate qui vitae.
+                                                    Temporibus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-block w-100">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <img src="source/images/laptop.png" class="w-100" alt="laptop">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 slide-text">
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                                                    obcaecati voluptatum voluptate, sapiente voluptates doloremque,
+                                                    earum repellat sint vel, fugiat sit cupiditate qui vitae.
+                                                    Temporibus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- делаем контейнеры под каруселью -->
+                        <div class="col-lg-12 col-md-12 text-center mt-4">
+                            <button type="button" class="btn btn-outline-primary btn-lg my-4">See more</button>
+                        </div>
+                        <div class="col-lg-12 col-md-12 text-center mt-4">
+                            <p>Can we help you?</p>
+                        </div>
+                        <!-- далее будем анимировать изображение, чтобы картинка звоночка тряслась
+                        https://webcode.tools/generators/css/keyframe-animation, код и настройки берем отсюда -->
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <img class="call-anim" style="width:40px" src="source/files/phone.png" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- контейнер для боковой панели, занимает 3 доли -->
+                <!-- боковая панель на планшетах внизу, col-md-12 -->
+                <div class="col-lg-3 col-md-12">
+                    <div class="row px-2">
+                        <div class="col-lg-12 sidebar my-4">
+                            <!-- пишем lorem и цифру, он придумает рандомные слова lorem26 -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae voluptatum dolorum.
+                                Nobis repellendus sint, corrupti accusantium repellat pariatur recusandae sunt autem
+                                nesciunt ex quam expedita? <a href="#">Learn more>>></a> </p>
+                        </div>
+                        <div class="col-lg-12 sidebar my-4">
+                            <!-- пишем lorem и цифру, он придумает рандомные слова lorem26 -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae voluptatum dolorum.
+                                Nobis repellendus sint, corrupti accusantium repellat pariatur recusandae sunt autem
+                                nesciunt ex quam expedita? <a href="#">Learn more>>></a> </p>
+                        </div>
+                        <div class="col-lg-12 sidebar my-4">
+                            <!-- пишем lorem и цифру, он придумает рандомные слова lorem26 -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae voluptatum dolorum.
+                                Nobis repellendus sint, corrupti accusantium repellat pariatur recusandae sunt autem
+                                nesciunt ex quam expedita? <a href="#">Learn more>>></a> </p>
+                        </div>
+                        <div class="col-lg-12 sidebar my-4">
+                            <!-- пишем lorem и цифру, он придумает рандомные слова lorem26 -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae voluptatum dolorum.
+                                Nobis repellendus sint, corrupti accusantium repellat pariatur recusandae sunt autem
+                                nesciunt ex quam expedita? <a href="#">Learn more>>></a> </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-4">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- text-center, это класс из бутстрапа, для того, чтобы внутри контейнера
+                расположить посередине текст, например -->
+                <div class="col-lg-4 col-md-12 footer-text text-center">
+                    <p>All Rights Reserved 2023</p>
+                </div>
+                <div class="col-lg-4 col-md-12 footer-text text-center">
+                    <p>Contacts <br> Job <br> Our team</p>
+                </div>
+                <!-- media-links создаем, чтобы расположить изображения с лого в блоке по центру -->
+                <div class="col-lg-4 col-md-12 media-links">
+                    <img style="margin-inline:1em; width:40px" src="source/files/yt.png" alt="...">
+                    <img style="margin-inline:1em; width:40px" src="source/files/tg.png" alt="...">
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+<!-- загрузка сайта на хостинг -->

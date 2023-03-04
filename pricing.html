@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="source/styles/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="source/files/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="source/files/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="source/files/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="source/files/favicon_io/site.webmanifest">
+</head>
+
+<body>
+    <!-- можно сделать градиент для body
+    есть сайты, которые помогают генерировать разные штуки
+    https://webcode.tools/ -->
+    <!-- внизу на сайте при генерации надо скопировать код для иконок
+    тк у каждого устройства, пк телефон айпад меняется разрешение картинки из-за размера экрана -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+        есть такое и свой путь добавляем в конце
+        <link rel="icon" type="image/png" sizes="16x16" href="source/files/favicon_io/favicon-16x16.png"> -->
+
+
+    <!-- шапка навигации, например
+    так лучше индексируется контент на сайте
+    по поисковики продвинутные и это уже не обязательно -->
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="source/files/bread.svg" alt="hoho"></a> <button
+                    class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">
+                                <img style="margin-inline:1em; width:30px" src="source/files/yt.png" alt="...">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">
+                                <img style="margin-inline:1em; width:30px" src="source/files/tg.png" alt="...">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- взяли из bootstrap
+    сначала зашли в containers, там несколько видов
+    выбрали container-fluid, тк он будет занимать 100% экрана 
+    независимо от разрешения
+    далее, заходим в grid, так как большой container у нас уже есть
+    берем только часть начиная от div class="row
+    и потом уже из card просто вставляем ту карточку, которая нам нужна -->
+
+    <!-- также нужно расписать сколько долей занимает каждая карточка
+    иначе будет хаос, это нужно написать в div class="col"
+    col-lg-4 на широких экранах один столбец будет занимать 4 доли
+    из 12 (это как мы делали в сетке grid), 3 карточки-колонки по 4 доли. -->
+
+    <!-- <div class="card" style="width: 18rem;"> тут было так, но мы удаляем 
+        style="width: 18rem; потому что так картинки распределены неравномерно -->
+    <!-- 
+        m - margin
+        mt- top
+        mb- bottom
+        mx- в стороны, слева и справа
+        my - снизу и сверху
+
+        p - padding
+        pt- top
+        pb- bottom
+        px- в стороны, слева и справа
+        py - снизу и сверху
+
+
+        значения приставок, например m-4, p-2
+        0 - удалить отступ
+        1 - 0,25rem
+        2 - 0,5 rem
+        3 - 1 rem
+        4- 1,5 rem
+        5 - 3 rem -->
+
+    <section>
+        <div class="container-fluid mt-4">
+            <!-- далее необходимо создать еще одну группу колонок, чтобы сделать две боковые и
+            одну среднюю главную полосы, и создаем отдельный большой контейнер для каждого блока -->
+
+            <div class="row">
+                <!-- боковой отступ (для акций, например), занимает одну долю -->
+                <div class="col-lg-1">
+
+                </div>
+
+                <!-- контейнер для главной карты с товарами, занимает 8 долей -->
+                <!-- боковая панель на планшетах внизу, col-md-12 -->
+                <div class="col-lg-8 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card">
+                                <a href="#"><img src="source/images/laptop.png" class="card-img-top" alt="laptop"></a>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Laptops</a></h5>
+                                    <p class="card-text"><a href="#">
+                                            Some quick example text to build on the card title and make up
+                                            the bulk
+                                            of the card's content.</a></p>
+                                    <a href="#" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card">
+                                <img src="source/images/gaming pc.png" class="card-img-top" alt="Game PC">
+                                <div class="card-body">
+                                    <h5 class="card-title">Games</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk
+                                        of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card">
+                                <img src="source/images/vr.png" class="card-img-top" alt="VR">
+                                <div class="card-body">
+                                    <h5 class="card-title">VR</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk
+                                        of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card">
+                                <img src="source/images/acc.png" class="card-img-top" alt="VR">
+                                <div class="card-body">
+                                    <h5 class="card-title">VR</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk
+                                        of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card">
+                                <img src="source/images/other.png" class="card-img-top" alt="VR">
+                                <div class="card-body">
+                                    <h5 class="card-title">VR</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk
+                                        of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card">
+                                <img src="source/images/controller.png" class="card-img-top" alt="VR">
+                                <div class="card-body">
+                                    <h5 class="card-title">VR</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk
+                                        of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card">
+                                <img src="source/images/acc.png" class="card-img-top" alt="VR">
+                                <div class="card-body">
+                                    <h5 class="card-title">VR</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk
+                                        of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card">
+                                <img src="source/images/gpu.png" class="card-img-top" alt="VR">
+                                <div class="card-body">
+                                    <h5 class="card-title">VR</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk
+                                        of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- контейнер для боковой панели, занимает 3 доли -->
+                <!-- боковая панель на планшетах внизу, col-md-12 -->
+                <div class="col-lg-3 col-md-12">
+                    <div class="row px-2">
+                        <div class="col-lg-12 sidebar my-4">
+                            <!-- пишем lorem и цифру, он придумает рандомные слова lorem26 -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae voluptatum dolorum.
+                                Nobis repellendus sint, corrupti accusantium repellat pariatur recusandae sunt autem
+                                nesciunt ex quam expedita? <a href="#">Learn more>>></a> </p>
+                        </div>
+                        <div class="col-lg-12 sidebar my-4">
+                            <!-- пишем lorem и цифру, он придумает рандомные слова lorem26 -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae voluptatum dolorum.
+                                Nobis repellendus sint, corrupti accusantium repellat pariatur recusandae sunt autem
+                                nesciunt ex quam expedita? <a href="#">Learn more>>></a> </p>
+                        </div>
+                        <div class="col-lg-12 sidebar my-4">
+                            <!-- пишем lorem и цифру, он придумает рандомные слова lorem26 -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae voluptatum dolorum.
+                                Nobis repellendus sint, corrupti accusantium repellat pariatur recusandae sunt autem
+                                nesciunt ex quam expedita? <a href="#">Learn more>>></a> </p>
+                        </div>
+                        <div class="col-lg-12 sidebar my-4">
+                            <!-- пишем lorem и цифру, он придумает рандомные слова lorem26 -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae voluptatum dolorum.
+                                Nobis repellendus sint, corrupti accusantium repellat pariatur recusandae sunt autem
+                                nesciunt ex quam expedita? <a href="#">Learn more>>></a> </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- делаем контейнеры под каруселью -->
+
+            <div class="col-lg-12 col-md-12 text-center mt-4">
+                <p>Can we help you?</p>
+            </div>
+            <!-- далее будем анимировать изображение, чтобы картинка звоночка тряслась
+            https://webcode.tools/generators/css/keyframe-animation, код и настройки берем отсюда -->
+            <div class="col-lg-12 col-md-12 text-center">
+                <img class="call-anim" style="width:40px" src="source/files/phone.png" alt="...">
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-4">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- text-center, это класс из бутстрапа, для того, чтобы внутри контейнера
+                расположить посередине текст, например -->
+                <div class="col-lg-4 col-md-12 footer-text text-center">
+                    <p>All Rights Reserved 2023</p>
+                </div>
+                <div class="col-lg-4 col-md-12 footer-text text-center">
+                    <p>Contacts <br> Job <br> Our team</p>
+                </div>
+                <!-- media-links создаем, чтобы расположить изображения с лого в блоке по центру -->
+                <div class="col-lg-4 col-md-12 media-links">
+                    <img style="margin-inline:1em; width:40px" src="source/files/yt.png" alt="...">
+                    <img style="margin-inline:1em; width:40px" src="source/files/tg.png" alt="...">
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
